@@ -91,6 +91,10 @@ class CommandReader extends Thread{
 
 			$lastLine = microtime(true);
 		}
+
+		if(!$this->readline){
+			fclose($stdin);
+		}
 	}
 
 	public function getThreadName(){
